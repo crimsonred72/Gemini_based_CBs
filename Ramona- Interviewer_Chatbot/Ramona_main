@@ -29,7 +29,6 @@ for question_number in range(len(Question_list)):
     print("\nInterviewer:", question)
     print("\n")
     user_answer = input("Your answer: ")
-    length_check = user_answer
     answer_store = user_answer
     try:
       follow_up_prompt = f"Generate a follow-up question based on this answer: {user_answer}"
@@ -42,11 +41,6 @@ for question_number in range(len(Question_list)):
     print("\n")
     user_answer = input("Your answer: ")
     answer_store += user_answer
-    length_check += user_answer
-    if (len(length_check)< 20):
-        print("Thank you, we'll get in touch with you shortly")
-        break
-    length_check = "a"
 
 determine_result(answer_store)
 
